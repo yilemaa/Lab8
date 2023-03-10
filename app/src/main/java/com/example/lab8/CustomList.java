@@ -52,11 +52,9 @@ public class CustomList extends ArrayAdapter<City> {
     public void addCity(City city){
         cities.add(city);
     }
-    public int countCity() {
-        return cities.size();
-    }
+
     public boolean hasCity(City city) {
-        return false;
+        return cities.contains(city);
     }
     public void deleteCity(City city) {
         this.cities.remove(city);
