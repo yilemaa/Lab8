@@ -23,7 +23,17 @@ public class CustomListTest {
         assertEquals(1, list.getCount());
 
     }
-
+    @Test
+    public void testCountCity() {
+        CustomList list = new CustomList(null,citylist);
+        City city = new City("Edmonton","AB");
+        list.addCity(city);
+        assertEquals(1,list.countCity());
+        assertEquals(list.getCount(),list.countCity());
+        list.deleteCity(city);
+        assertEquals(0,list.countCity());
+        assertEquals(list.getCount(),list.countCity());
+    }
 
 
 }
